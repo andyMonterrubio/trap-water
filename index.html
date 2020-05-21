@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Skyguardian Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/f29030544c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar bg-primary">
+        <h1><i class="fas fa-chart-bar"></i> Elevation map</h1>
+    </nav>
+    <div class="container">
+        <form id="form">
+            <label for="data">Insert Data:</label>
+            <div class="input_cont">
+                <input type="text" id="data" name="user_data" placeholder="010203102021"  minlength="12" maxlength="12" onkeypress="return onlyNumberKey(event)" />
+                <small>Insert 12 numbers w/o commas</small>
+            </div>
+            <button type="submit" class="btn btn-dark">Submit Data</button>
+        </form>
+        <div class="graph">
+
+        </div>
+        <div class="section result">
+
+        </div>
+    </div>
+
+</body>
+</html>
