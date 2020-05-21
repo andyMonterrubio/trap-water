@@ -9,6 +9,7 @@ function onlyNumberKey(evt) {
 $(document).ready(function(){
     $(".loader").hide();
     $(".cont-graph").hide();
+    $("#clear").hide();
     
     $("#form").submit(function(e){
         e.preventDefault();
@@ -60,16 +61,20 @@ $(document).ready(function(){
                 $(".loader").hide();
                 $(".cont-graph").show();
                 $( "div.result" ).html("<p>The amount of water trapped is: <span class='total'>"+ total +"</span></p>");
-
+                $("#clear").show();
             }, 1000);
-
-            
-
-            
         } else {
             alert("Please enter an input")
         }
     });
+
+    $("#clear").click(function(){
+        $(".loader").hide();
+        $(".cont-graph").hide();
+        $("#clear").hide();
+        $("div.cont-graph").html('<table id="graph"></table>');
+        $( "div.result" ).html("")
+      });
   
   });
   
